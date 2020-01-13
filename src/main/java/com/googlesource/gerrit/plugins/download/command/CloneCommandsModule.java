@@ -22,11 +22,7 @@ public class CloneCommandsModule extends AbstractModule {
   @Override
   protected void configure() {
     bind(CloneCommand.class)
-      .annotatedWith(Exports.named("Clone"))
-      .to(com.googlesource.gerrit.plugins.download.command.CloneCommand.class);
-
-    bind(CloneCommand.class)
-        .annotatedWith(Exports.named("Clone with commit-msg hook"))
+        .annotatedWith(Exports.named("Clone"))
         .to(CloneWithCommitMsgHook.class);
   }
 }
