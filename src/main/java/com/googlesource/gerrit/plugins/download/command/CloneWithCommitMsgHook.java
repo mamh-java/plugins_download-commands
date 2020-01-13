@@ -70,8 +70,6 @@ public class CloneWithCommitMsgHook extends CloneCommand {
           .append(" && scp -p -P ")
           .append(sshScheme.getSshdPort())
           .append(" ")
-          .append(username)
-          .append("@")
           .append(sshScheme.getSshdHost())
           .append(":")
           .append(HOOK)

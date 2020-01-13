@@ -86,8 +86,6 @@ public class SshScheme extends DownloadScheme {
 
     StringBuilder r = new StringBuilder();
     r.append("ssh://");
-    r.append(username);
-    r.append("@");
     r.append(ensureSlash(sshdAddress));
     r.append(project);
     return r.toString();
