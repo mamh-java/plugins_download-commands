@@ -23,16 +23,7 @@ public class DownloadCommandsModule extends AbstractModule {
   protected void configure() {
     bind(DownloadCommand.class).annotatedWith(Exports.named("Checkout")).to(CheckoutCommand.class);
 
-    bind(DownloadCommand.class)
-        .annotatedWith(Exports.named("Cherry Pick"))
-        .to(CherryPickCommand.class);
+    bind(DownloadCommand.class).annotatedWith(Exports.named("Cherry Pick")).to(CherryPickCommand.class);
 
-    bind(DownloadCommand.class)
-        .annotatedWith(Exports.named("Format Patch"))
-        .to(FormatPatchCommand.class);
-
-    bind(DownloadCommand.class).annotatedWith(Exports.named("Pull")).to(PullCommand.class);
-
-    bind(DownloadCommand.class).annotatedWith(Exports.named("repo")).to(RepoCommand.class);
   }
 }
