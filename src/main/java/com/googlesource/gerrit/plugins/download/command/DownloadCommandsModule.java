@@ -22,8 +22,7 @@ public class DownloadCommandsModule extends AbstractModule {
   @Override
   protected void configure() {
     bind(DownloadCommand.class).annotatedWith(Exports.named("Checkout")).to(CheckoutCommand.class);
-
-    bind(DownloadCommand.class).annotatedWith(Exports.named("Cherry Pick")).to(CherryPickCommand.class);
-
+    bind(DownloadCommand.class).annotatedWith(Exports.named("CherryPick")).to(CherryPickCommand.class);
+    bind(DownloadCommand.class).annotatedWith(Exports.named("Pull")).to(PullCommand.class);
   }
 }
