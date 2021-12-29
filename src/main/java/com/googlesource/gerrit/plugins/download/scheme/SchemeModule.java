@@ -21,16 +21,6 @@ import com.google.inject.AbstractModule;
 public class SchemeModule extends AbstractModule {
   @Override
   protected void configure() {
-    bind(DownloadScheme.class)
-        .annotatedWith(Exports.named("anonymous http"))
-        .to(AnonymousHttpScheme.class);
-
-    bind(DownloadScheme.class).annotatedWith(Exports.named("git")).to(GitScheme.class);
-
-    bind(DownloadScheme.class).annotatedWith(Exports.named("http")).to(HttpScheme.class);
-
-    bind(DownloadScheme.class).annotatedWith(Exports.named("repo")).to(RepoScheme.class);
-
     bind(DownloadScheme.class).annotatedWith(Exports.named("ssh")).to(SshScheme.class);
   }
 }
