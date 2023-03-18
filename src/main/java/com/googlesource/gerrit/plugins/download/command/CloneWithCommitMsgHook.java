@@ -71,8 +71,8 @@ public class CloneWithCommitMsgHook extends CloneCommand {
       }
 
       b.append(" ")
-          .append(username.get())
-          .append("@")
+//          .append(username.get())
+//          .append("@")
           .append(sshScheme.getSshdHost())
           .append(":")
           .append(HOOK)
